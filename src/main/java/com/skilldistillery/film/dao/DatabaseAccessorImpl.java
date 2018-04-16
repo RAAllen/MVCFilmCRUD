@@ -207,4 +207,40 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 		}
 	}
 
+	public boolean deleteFilm(int filmId) {
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(URL, username, password);
+			conn.setAutoCommit(false);
+			String sql = "DELETE FROM film WHERE id = ?";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, filmId);
+			stmt.executeUpdate();
+			conn.commit();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			if(conn != null) {
+				try {
+					conn.rollback();
+				} catch (SQLException ee){
+					System.err.println("Error attempting to rollback.");
+				}
+			}
+			return false;
+		}
+		return true;
+	}
+	
+	public Film updateFilm(Film film) {
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(URL, username, password);
+			conn.setAutoCommit(false);
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return film;
+	}
+
 }
