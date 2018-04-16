@@ -52,7 +52,7 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 					System.err.println("Error trying to rollback");
 				}
 			}
-			throw new RuntimeException("Error inserting actor " + film);
+			throw new RuntimeException("Error inserting film: " + film);
 		}
 		return film;
 	}
@@ -86,7 +86,6 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 						replacementCost, rating, specialFeatures);
 				List<Actor> cast = getActorsByFilmId(id);
 				film.setCast(cast);
-				// ioManager.print(new Text("\n" + film.toString()));
 				film.printFilm(film);
 			}
 			if (!filmFound) {
@@ -97,7 +96,6 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 			conn.close();
 		} catch (SQLException e) {
 			ioManager.print(new TextWithNewLine("An error occurred, please make another selection."));
-			// e.printStackTrace();
 		}
 		return film;
 	}
@@ -139,7 +137,6 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 			conn.close();
 		} catch (SQLException e) {
 			ioManager.print(new TextWithNewLine("An error occurred, please make another selection."));
-			// e.printStackTrace();
 		}
 
 		return film;
@@ -165,7 +162,6 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 			conn.close();
 		} catch (SQLException e) {
 			ioManager.print(new TextWithNewLine("An error occurred, please make another selection."));
-			// e.printStackTrace();
 		}
 		return actor;
 	}
@@ -192,7 +188,6 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 			conn.close();
 		} catch (SQLException e) {
 			ioManager.print(new TextWithNewLine("An error occurred, please make another selection."));
-			// e.printStackTrace();
 		}
 		return cast;
 	}
@@ -252,7 +247,7 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 			ioManager.print(new Text("" + updateCount));
 			conn.commit();
 		} catch (SQLException e) {
-			e.printStackTrace();
+			ioManager.print(new TextWithNewLine("An error occurred, please make another selection."));
 		}
 		return film;
 	}
