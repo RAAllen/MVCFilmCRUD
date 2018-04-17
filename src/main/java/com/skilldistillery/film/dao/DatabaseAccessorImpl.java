@@ -168,7 +168,6 @@ public class DatabaseAccessorImpl implements DatabaseAccessorInterface {
 
 	@Override
 	public List<Actor> getActorsByFilmId(int filmId) {
-		Film film = null;
 		List<Actor> cast = new ArrayList<>();
 		try {
 			Connection conn = DriverManager.getConnection(URL, username, password);

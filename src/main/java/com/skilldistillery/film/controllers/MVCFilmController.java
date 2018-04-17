@@ -16,10 +16,10 @@ public class MVCFilmController {
 	@Autowired
 	DatabaseAccessorImpl dao;
 
-	@RequestMapping(path = "home.do")
+	@RequestMapping(path = "*.do")
 	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView();
-		mv.setViewName("WEB-INF/views/home.jsp");
+		mv.setViewName("WebContent/index.html");
 		return mv;
 	}
 
