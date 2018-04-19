@@ -28,7 +28,7 @@ public class MVCFilmController {
 		Film film;
 		ModelAndView mv;
 		film = dao.getFilmById(filmId);
-		mv = new ModelAndView("WEB-INF/views/viewFilm.jsp");
+		mv = new ModelAndView("WEB-INF/views/result.jsp");
 		mv.addObject("film", film);
 		return mv;
 	}
@@ -38,7 +38,7 @@ public class MVCFilmController {
 		Film film;
 		ModelAndView mv;
 		film = dao.getFilmByKeyword(keyword);
-		mv = new ModelAndView("WEB-INF/views/viewFilm.jsp");
+		mv = new ModelAndView("WEB-INF/views/result.jsp");
 		mv.addObject("film", film);
 		return mv;
 	}

@@ -17,56 +17,60 @@
       <hr>
     </div>
     <div>
-      <a href="index.html">Home</a>
+      <a href="index.html"><button type="button" class="btn btn-primary">Home</button></a>
       <form action="addFilm.do" method="GET">
         <h4>Add a new Film to the database:</h4>
-        <label for="title"><h5>Add the title:</h5></label>
+        <label for="title">Add the title:</label>
         <input type="text" name="title" />
         <br/>
-        <label for="description"><h5>Add a description:</h5></label>
+        <label for="description">Add a description:</label>
         <input type="text" name="description" />
         <br/>
-        <label for="releaseYear"><h5>Add the release year:</h5></label>
+        <label for="releaseYear">Add the release year:</label>
         <input type="number" name="releaseYear" />
         <br/>
-        <label for="languageId"><h5>Add the language:</h5></label>
+        <label for="languageId">Add the language:</label>
         <select name="languageId">
-					<option value="1">English</option>
-					<option value="2">Italian</option>
-					<option value="3">Japanese</option>
-					<option value="4">Mandarin</option>
-					<option value="5">French</option>
-					<option value="6">German</option>
-				</select>
+			<option value="1">English</option>
+			<option value="2">Italian</option>
+			<option value="3">Japanese</option>
+			<option value="4">Mandarin</option>
+			<option value="5">French</option>
+			<option value="6">German</option>
+		</select>
         <br/>
-        <label for="rentalDuration"><h5>Add the rental length:</h5></label>
+        <label for="rentalDuration">Add the rental length:</label>
         <input type="number" name="rentalDuration" />
-        </br>
-        <label for="rentalRate"><h5>Add the rental rate:</h5></label>
+        <br/>
+        <label for="rentalRate">Add the rental rate:</label>
         <input type="number" name="rentalRate" />
         <br/>
-        <label for="length"><h5>Add the length of the film:</h5></label>
+        <label for="length">Add the length of the film:</label>
         <input type="number" name="length" />
         <br/>
-        <label for="replacementCost"><h5>Add the replacement cost:</h5></label>
+        <label for="replacementCost">Add the replacement cost:</label>
         <input type="number" name="replacementCost" />
         <br/>
-        <label for="rating"><h5>Add the rating:</h5></label>
+        <label for="rating">Add the rating:</label>
         <select name="rating">
-					<option value="G">G</option>
-					<option value="PG">PG</option>
-					<option value="PG13">PG-13</option>
-					<option value="R">R</option>
-					<option value="NC17">NC-17</option>
-				</select>
+			<option value="G">G</option>
+			<option value="PG">PG</option>
+			<option value="PG13">PG-13</option>
+			<option value="R">R</option>
+			<option value="NC17">NC-17</option>
+		</select>
         <br/>
-        <label for="specialFeatures"><h5>Add the special features:</h5></label>
-        <input type="checkbox" name="specialFeatures" value="Trailers">Trailers</input>
-        <input type="checkbox" name="specialFeatures" value="Commentaries">Commentaries</input>
-        <input type="checkbox" name="specialFeatures" value="Deleted Scenes">Deleted Scenes</input>
-        <input type="checkbox" name="specialFeatures" value="Behind the Scenes">Behind the Scenes</input>
+        <label for="specialFeatures">Add the special features:</label>
+        <input type="checkbox" name="specialFeatures" value="trailers">
+        <label for="trailers">Trailers</label>
+        <input type="checkbox" name="specialFeatures" value="commentaries"/>
+        <label for="commentaries">Commentaries</label>
+        <input type="checkbox" name="specialFeatures" value="deletedScenes"/>
+        <label for="deletedScenes">Deleted Scenes</label>
+        <input type="checkbox" name="specialFeatures" value="behindTheScenes"/>
+        <label for="behindTheScenes">Behind the Scenes</label>
         <br>
-        <input type="submit" value="submit" />
+        <input type="submit" value="Submit Your Edit" type="button" class="btn btn-primary"/>
       </form>
     </div>
   </div>

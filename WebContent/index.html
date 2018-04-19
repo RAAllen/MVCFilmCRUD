@@ -4,7 +4,6 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<title>MVC Film Query</title>
@@ -18,125 +17,18 @@
 		</div>
 		<div>
 			<form action="result.do" method="GET">
-				<label for="id"><h4>Search for a film by id</h4></label>
+				<h4><label for="id">Search for a film by id</label></h4>
 				<input type="number" name="id" />
-				<input type="submit" value="submit" />
+				<input type="submit" value="submit" type="button" class="btn btn-primary"/>
 			</form>
 			<hr />
 			<form action="result.do" method="GET">
-				<label for="keyword"><h4>Search for a film by keyword</h4></label>
+				<h4><label for="keyword">Search for a film by keyword</label></h4>
 				<input type="text" name="keyword" />
-				<input type="submit" value="submit" />
+				<input type="submit" value="submit" type="button" class="btn btn-primary"/>
 			</form>
-			<hr />
-			<form action="addFilm.do" method="GET">
-				<h4>Add a new Film to the database:</h4>
-				<label for="title"><h5>Add the title:</h5></label>
-				<input type="text" name="title" />
-				<br/>
-				<label for="description"><h5>Add a description:</h5></label>
-				<input type="text" name="description" />
-				<br/>
-				<label for="releaseYear"><h5>Add the release year:</h5></label>
-				<input type="number" name="releaseYear" />
-				<br/>
-				<label for="languageId"><h5>Add the language:</h5></label>
-				<select name="languageId">
-					<option value="1">English</option>
-					<option value="2">Italian</option>
-					<option value="3">Japanese</option>
-					<option value="4">Mandarin</option>
-					<option value="5">French</option>
-					<option value="6">German</option>
-				</select>
-				<br/>
-				<label for="rentalDuration"><h5>Add the rental length:</h5></label>
-				<input type="number" name="rentalDuration" />
-				</br>
-				<label for="rentalRate"><h5>Add the rental rate:</h5></label>
-				<input type="number" name="rentalRate" />
-				<br/>
-				<label for="length"><h5>Add the length of the film:</h5></label>
-				<input type="number" name="length" />
-				<br/>
-				<label for="replacementCost"><h5>Add the replacement cost:</h5></label>
-				<input type="number" name="replacementCost" />
-				<br/>
-				<label for="rating"><h5>Add the rating:</h5></label>
-				<select name="rating">
-					<option value="G">G</option>
-					<option value="PG">PG</option>
-					<option value="PG13">PG-13</option>
-					<option value="R">R</option>
-					<option value="NC17">NC-17</option>
-				</select>
-				<br/>
-				<label for="specialFeatures"><h5>Add the special features:</h5></label>
-				<input type="checkbox" name="specialFeatures" value="Trailers">Trailers</input>
-				<input type="checkbox" name="specialFeatures" value="Commentaries">Commentaries</input>
-				<input type="checkbox" name="specialFeatures" value="Deleted Scenes">Deleted Scenes</input>
-				<input type="checkbox" name="specialFeatures" value="Behind the Scenes">Behind the Scenes</input>
-				<br>
-				<input type="submit" value="submit" />
-			</form>
-			<hr />
-			<form action="updateFilm.do" method="GET">
-				<h4>Edit a Film in the database:</h4>
-				<label for="id"><h5>What is the film's id?</h5></label>
-				<input type="number" name="id" />
-				<br/>
-				<label for="title"><h5>Add the title:</h5></label>
-				<input type="text" name="title" />
-				<br/>
-				<label for="description"><h5>Add a description:</h5></label>
-				<input type="text" name="description" />
-				<br/>
-				<label for="releaseYear"><h5>Add the release year:</h5></label>
-				<input type="number" name="releaseYear" />
-				<br/>
-				<label for="languageId"><h5>Add the language:</h5></label>
-				<select name="languageId">
-					<option value="1">English</option>
-					<option value="2">Italian</option>
-					<option value="3">Japanese</option>
-					<option value="4">Mandarin</option>
-					<option value="5">French</option>
-					<option value="6">German</option>
-				</select>
-				<br/>
-				<label for="rentalDuration"><h5>Add the rental length:</h5></label>
-				<input type="number" name="rentalDuration" />
-				<br/>
-				<label for="rentalRate"><h5>Add the rental rate:</h5></label>
-				<input type="number" name="rentalRate" />
-				<br/>
-				<label for="length"><h5>Add the length of the film:</h5></label>
-				<input type="number" name="length" />
-				<br/>
-				<label for="replacementCost"><h5>Add the replacement cost:</h5></label>
-				<input type="number" name="replacementCost" />
-				<br/>
-				<label for="rating"><h5>Add the rating:</h5></label>
-				<select name="rating">
-					<option value="G">G</option>
-					<option value="PG">PG</option>
-					<option value="PG13">PG-13</option>
-					<option value="R">R</option>
-					<option value="NC17">NC-17</option>
-				</select>
-				<br/>
-				<label for="specialFeatures"><h5>Add the special features:</h5></label>
-				<input type="checkbox" name="specialFeatures" value="Trailers">Trailers
-				</input>
-				<input type="checkbox" name="specialFeatures" value="Commentaries">Commentaries
-				</input>
-				<input type="checkbox" name="specialFeatures" value="Deleted Scenes">Deleted Scenes
-				</input>
-				<input type="checkbox" name="specialFeatures" value="Behind the Scenes">Behind the Scenes
-				</input>
-				<br>
-				<input type="submit" value="submit" />
-			</form>
+			<hr/>
+			<a href="addFilm.html"><button type="button" class="btn btn-primary">Or add a film to the Database</button></a>
 		</div>
 	</div>
 	<!-- Optional JavaScript -->
